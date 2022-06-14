@@ -25,7 +25,7 @@ function ToggleTree(props) {
   const { val, children } = props.data;
 
   return (
-    <div>
+    <div className="node">
       {val}
       {children.map((elem) => {
         return (
@@ -33,7 +33,7 @@ function ToggleTree(props) {
             {elem.children ? (
               <ToggleTree data={elem} />
             ) : (
-              <div class="node">{elem.val}</div>
+              <div className="node">{elem.val}</div>
             )}
           </div>
         );
