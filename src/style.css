@@ -6,4 +6,5 @@ p {
 
 .node {
   margin-left: 12px;
+  position: relative;
 }

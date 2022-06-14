@@ -26,12 +26,15 @@ function ToggleTree(props) {
 
   return (
     <div>
-      ß{val}
+      {val}
       {children.map((elem) => {
         return (
           <div>
-            <div class="node">{elem.val}</div>
-            {elem.children ? <ToggleTree data={elem} /> : null}
+            {elem.children ? (
+              <ToggleTree data={elem} />
+            ) : (
+              <div class="node">{elem.val}</div>
+            )}
           </div>
         );
       })}
